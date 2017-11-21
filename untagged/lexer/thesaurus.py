@@ -1,4 +1,3 @@
-# encoding: utf-8
 import json
 
 ###################################################################
@@ -20,7 +19,7 @@ def _removeDuplicates(l):
 ###################################################################
 def _load(word):
     c = word[0]
-    path = "lexer/thesaurus/thesaurus_update/" + c + ".json"
+    path = "untagged/lexer/thesaurus/thesaurus_update/" + c + ".json"
     with open(path, 'r') as fileIn:
         syn = json.load(fileIn)
         fileIn.close()
