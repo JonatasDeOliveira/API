@@ -14,6 +14,7 @@ def write(dic, letter):
     
 occDict = load("dataset_sortby_occurence")
 letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","x","w","y","z"]
+#letters = ["z"]
 
 for letter in letters:
     wordsDict = load("thesaurus/thesaurus_update/"+letter)
@@ -50,7 +51,9 @@ for letter in letters:
             newAntDict = {}
             for elem in auxList:
                 aux.append(elem[0])
-        newDict[word] = aux
+            newDict[word] = aux
+        else:
+            newDict[word] = newAntDict
     write(newDict, letter)
     
 
